@@ -241,7 +241,28 @@ button.addEventListener("click", changecontent)
 </fieldset>
 
 <script>
-  // code here for above problem
+// var todolist = document.getElementById("make-todo-list");
+//   function addElement () {
+//     var mylist = document.getElementById("empty-todo-list");
+//     for(var i = 0; i < 10; i++){
+//     var newLi = mylist.createElement("li");
+//     var text = mylist.createTextNode("Teststring in <li>");
+//     newLi.appendChild(text);
+//     var ulnew = document.getElementsByTagName('ul')
+//     ulnew[0].appendChild(newLi);
+//     }   
+// }
+// todolist.addElement("click", addElement)
+var button = document.getElementById("make-todo-list");
+function addElement() {
+      var node = document.createElement("LI")                // Create a <li> node
+      var textnode = document.createTextNode("1")
+      var textnode = document.createTextNode("2")         // Create a text node
+      node.appendChild(textnode)                              // Append the text to <li>
+  document.getElementById("empty-todo-list").appendChild(node)     // Append <li> to <ul> 
+}
+button.addEventListener("click", addElement)
+
 </script>
 
 <div class="hint">
@@ -268,19 +289,19 @@ button.addEventListener("click", changecontent)
 </fieldset>
 
 <script>
-//  Here's a stub of a function you can use!
-//  function reverseString() {
-//    var msg = "Porcupines are cute";
-//
-//    // do some stuff here to reverse that string into a new variable
-//    var newMsg = "This should be the reversed string";
-//
-//    alert(newMsg);
-//  }
+ // Here's a stub of a function you can use!
+ function reverseString() {
+   var msg = "Porcupines are cute";
+
+   // do some stuff here to reverse that string into a new variable
+   var newMsg = msg.split("").reverse().join("");
+
+   alert(newMsg);
+ }
 // Here's a stub of event stuff you could use
-//
-//  var button = document.getElementById('reverse-string-button');
-//  button.addEventListener('click', reverseString);
+
+ var button = document.getElementById('reverse-string-button');
+ button.addEventListener('click', reverseString);
 </script>
 
 
