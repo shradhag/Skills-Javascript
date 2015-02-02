@@ -152,7 +152,16 @@ button.addEventListener("click", changecontent)
 </fieldset>
 
 <script>
-  // code here for above problem
+  var preventsubmission = document.getElementById("prevent-form-submission-button");
+  function makealert(evt){
+    evt.preventDefault();
+    alert("You may not submit")
+
+  }
+
+  preventsubmission.addEventListener("click", makealert)
+  
+
 </script>
 
 <div class="hint">
@@ -162,9 +171,17 @@ button.addEventListener("click", changecontent)
     can catch both with only one event listener?
   </div>
 </div>
+<script>
+ var preventsubmission = document.getElementById("prevent-form-submission-button");
+  function makealert(evt){
+    evt.preventDefault();
+    alert("You may not submit")
 
+  }
 
-
+  preventsubmission.addEventListener("click", makealert)
+  
+</script>
 
 
 
@@ -178,7 +195,12 @@ button.addEventListener("click", changecontent)
 </fieldset>
 
 <script>
-  // code here for above problem
+  var inputs = document.getElementsByClassName('tricky-to-find')[0]
+  function makealert(evt){
+    evt.preventDefault();
+    alert("Another alert box!")
+  }
+  inputs.addEventListener("click", makealert)
 </script>
 
 <div class="hint">
