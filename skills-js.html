@@ -254,12 +254,16 @@ button.addEventListener("click", changecontent)
 // }
 // todolist.addElement("click", addElement)
 var button = document.getElementById("make-todo-list");
+var liList = document.getElementById("empty-todo-list").getElementsByTagName("li");
+var largo = liList.length
 function addElement() {
+    if (largo < 10){
       var node = document.createElement("LI")                // Create a <li> node
       var textnode = document.createTextNode("1")
       var textnode = document.createTextNode("2")         // Create a text node
       node.appendChild(textnode)                              // Append the text to <li>
   document.getElementById("empty-todo-list").appendChild(node)     // Append <li> to <ul> 
+}
 }
 button.addEventListener("click", addElement)
 
@@ -313,7 +317,7 @@ button.addEventListener("click", addElement)
 <p>You should use jQuery for these parts.</p>
 <p>We didn't include jQuery in this document, though&mdash;so your first task is to include it!</p>
 
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 
 
